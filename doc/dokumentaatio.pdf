@@ -1,0 +1,20 @@
+1. Johdanto 
+
+Muistilistan tarkoitus on estää asioiden unohtaminen tallentamalla ne ihmisen muistia pysyvämpään paikkaan Muistilista-tietokantasovellukseen. 
+
+Muistilistaan voi tallettaa erilaisia muistettavia askareita käyttäjäkohtaisesti. Askareille voi asettaa tärkeys-indikaattoreita, niitä voi järjestää usealla tavalla ja askareita voi luokitella erilaisiin ryhmiin.
+
+Yksi askare voi kuulua myös useaan luokkaan.
+
+Muistilista toteutetaan laitoksen Users-palvelimella käyttäen PostrgreSQL-tietokantapalvelinta ja edellyttää tietyn tietokannan käyttöä.
+
+Muistilista ei vaadi web-sovelluksen alustajärjestelmältä tukea jollekin ohjelmointikielelle. Eikä selaimen tarvitse tukea mitään tiettyä ohjelmointikieltä.
+
+
+2. Käyttäjäryhmät
+
+Asiakas
+	Asiakas on rekisteröitynyt käyttäjä
+
+
+
