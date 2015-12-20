@@ -45,10 +45,37 @@
       </div>
     </nav>
 
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- Sovelluksen nimi -->
+      <a class="navbar-brand" href="home.html">Muistilista</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="nav navbar-nav">
+        <!-- Navigaation linkit -->
+        <li><a href="suunnitelmat/memorylist.html">Muistilista</a></li>
+      </ul>
+        
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="suunnitelmat/login.html">Kirjaudu sisään</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
     <div id="main-container">
       <!-- Dynaaminen sisältö tulee tähän -->
       {% block content %}{% endblock %}
     </div>
+      
 
     {% block body %}
       <!-- jQuery -->
