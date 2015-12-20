@@ -8,20 +8,20 @@
     HelloWorldController::sandbox();
   });
   
-  $routes->get('/login', function() {
+  $routes->get('suunnitelmat/login', function() {
   HelloWorldController::login();
 });
-$routes->get('/memorylist', function() {
+$routes->get('suunnitelmat/memorylist', function() {
   HelloWorldController::memorylist();
 });
 
-$routes->get('/reg', function() {
+$routes->get('suunnitelmat/reg', function() {
   HelloWorldController::reg();
 });
 
-$routes->get('/edit_memory', function() {
+$routes->get('suunnitelmat/edit_memory', function() {
   HelloWorldController::edit_memory();
 });
-$routes->get('/memo_page', function() {
+$routes->get('suunnitelmat/memo_page', function() {
   HelloWorldController::memo_page();
 });
