@@ -2,13 +2,13 @@
 
 Yleisiä linkkejä:
 
-* [Linkki sovellukseeni](https://www.jarlehti.users.cs.helsinki.fi/Tsoha)
+* [Linkki sovellukseeni](https://www.jarlehti.users.cs.helsinki.fi/tsoha)
 * [Linkki dokumentaatiooni](https://www.github.com/Jarsba/Tsoha-Bootstrap)
-* [Linkki kirjautumiseen](https://www.jarlehti.users.cs.helsinki.fi/Tsoha/suunnitelmat/login.html)
-* [Linkki muistilistaan](https://www.jarlehti.users.cs.helsinki.fi/Tsoha/suunnitelmat//memorylist.html)
-* [Linkki rekisteröintiin](https://www.jarlehti.users.cs.helsinki.fi/Tsoha/suunnitelmat/reg.html)
-* [Linkki muistilistan muokkaukseen](https://www.jarlehti.users.cs.helsinki.fi/Tsoha/suunnitelmat/edit_memory.html)
-* [Linkki muistielementtiin](https://www.jarlehti.users.cs.helsinki.fi/Tsoha/suunnitelmat/memo_page.html)
+* [Linkki kirjautumiseen](https://www.jarlehti.users.cs.helsinki.fi/tsoha/login.html)
+* [Linkki muistilistaan](https://www.jarlehti.users.cs.helsinki.fi/tsoha/memorylist.html)
+* [Linkki rekisteröintiin](https://www.jarlehti.users.cs.helsinki.fi/tsoha/reg.html)
+* [Linkki muistilistan muokkaukseen](https://www.jarlehti.users.cs.helsinki.fi/tsoha/edit_memory.html)
+* [Linkki muistielementtiin](https://www.jarlehti.users.cs.helsinki.fi/tsoha/memo_page.html)
 
 ## Työn aihe
 
