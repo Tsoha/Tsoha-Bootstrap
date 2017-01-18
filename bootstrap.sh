@@ -31,8 +31,8 @@ echo "Asetetaan käyttöoikeudet ja asennetaan Composer..."
 ssh $USERNAME@users.cs.helsinki.fi "
 chmod -R a+rX htdocs
 cd htdocs/$PROJECT_FOLDER
-curl -sS https://getcomposer.org/installer | php
-php composer.phar install
+curl -sS https://getcomposer.org/download/1.3.0/composer.phar | php
+php composer.phar install 
 exit"
 
 echo "Valmis! Sovelluksesi on nyt valmiina osoitteessa $USERNAME.users.cs.helsinki.fi/$PROJECT_FOLDER"
