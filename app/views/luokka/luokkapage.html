@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if message is not null %}
+<div class="alert alert-success">
+    {{message}}
+</div>
+{% endif %}
+
+<div class ="col-md-8" style="margin-top: 40px">
+      <h2>{{luokka.luokka_name}}</h2>
+  <!-- Kuvaus tulee tähän -->
+  <p>
+    {{luokka.description}}
+  </p>
+</div>
+
+<div class ="col-md-4" style="margin-top: 50px">
+  <!-- Painikkeet tähän -->
+  <p>
+    <form method="post" action="{{base_path}}/luokka/{{luokka.luokka_id}}/remove" style="display: inline-block">
+      <button type="submit" class="btn btn-danger">Poista</button>
+    </form>
+<!--    <button class="btn btn-danger">Poista</button>-->
+    <a href="{{base_path}}/luokka/{{luokka.luokka_id}}/edit" class="btn btn-default">Muokkaa</a>
+  </p>
+</div>
+{% endblock %}

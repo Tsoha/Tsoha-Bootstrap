@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Muokkaa askaretta</h1>
+
+    {% if errors %}
+        <div class="alert alert-danger">
+          <ul>
+            {% for error in errors %}
+              <li>{{error}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+    {% endif %}
+    
+    <div by class="form-group" align="right">
+      <form method="post" action="{{base_path}}/askare/{{attributes.id}}/remove" style="display: inline-block;">
+        <button type="submit" class="btn btn-danger">Poista</button>
+      </form>
+    </div>
+  
+  <form method="post" action="{{base_path}}/askare/{{attributes.id}}/edit">
+      
+    <div class="form-group">
+      <label>Askareen nimi</label>
+      <input name="name" class="form-control" value="{{attributes.name}}" type="text">
+    </div>
+      
+    <div class="form-group">
+      <label>Luokka</label>
+      <select class="form-control" name="luokka[]"multiple="">
+        {% for luokka in luokat %}
+          <option value="{{luokka.luokka_id}}">{{luokka.luokka_name}}</option>
+        {% endfor %}
+      </select>
+<!--      <label>Luokka</label>
+      <select class="form-control" name="luokka">
+        {% for luokka in luokat %}
+            {% if attributes.luokka == luokka.luokka_name %}
+                <option value="{{luokka.luokka_name}}" selected="">{{luokka.luokka_name}}</option>Luokan id täytyy muuttaa nimeksi indexissa
+            {% else %}
+                <option value="{{luokka.luokka_name}}" >{{luokka.luokka_name}}</option>
+            {% endif %}
+        {% endfor %}
+      </select>-->
+    </div>
+      
+    <div class="form-group">
+      <label>Deadline</label>
+      <input name="deadline" class="form-control" value="{{attributes.deadline}}" type="text">
+    </div>
+      
+    <div class="form-group">
+      <label>Kuvaus</label>
+      <textarea name="description" class="form-control">{{attributes.description}}</textarea>
+    </div>
+      
+    <div class="form-group">
+      <label>Tärkeysaste</label>
+      <input name="importance" class="form-control" value="{{attributes.importance}}" type="text">
+    </div>
+      
+    <div bv class="form-group">
+      <button type="submit" class="btn btn-primary">Muokkaa</button>
+    </div>
+      
+  </form>
+{% endblock %}

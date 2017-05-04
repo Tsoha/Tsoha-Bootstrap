@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% import "macros/forms.html" as forms %}
+
+{% if message is not null %}
+<div class="alert alert-success">
+    {{message}}
+</div>
+{% endif %}
+
+<div class ="col-md-4">
+  <h1>{% for abc in askare.luokka %}
+        {{abc}} </br>
+      {% endfor %}</h1>
+  <!-- Painikkeet tähän -->
+  <p>
+<!--    <button class="btn btn-danger">Poista</button>-->
+    {{forms.remove_button("#{base_path}/askare/#{askare.id}/remove")}}
+    <a href="{{base_path}}/askare/{{askare.id}}/edit" class="btn btn-default">Muokkaa</a>
+  </p>
+  <!-- Tiedot tulee listana tähän -->
+  <ul style="font-size: 20px">
+    <li><strong>Lisäyspäivä:</strong> {{askare.added}}</li>
+    <li><strong>Deadline:</strong> {{askare.deadline}}</li>
+  </ul>
+</div>
+
+<div class ="col-md-8" style="margin-top: 40px">
+  <!-- Kuvaus tulee tähän -->
+  <h2>{{askare.name}}</h2>
+  <p>
+    {{askare.description}}
+  </p>
+</div>
+{% endblock %}

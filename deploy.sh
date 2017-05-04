@@ -8,15 +8,15 @@ source $DIR/config/environment.sh
 echo "Siirretään tiedostot users-palvelimelle..."
 
 # Tämä komento siirtää tiedostot palvelimelta
-rsync -z -r $DIR/app $DIR/assets $DIR/config $DIR/lib $DIR/sql $DIR/vendor $DIR/index.php $DIR/composer.json $USERNAME@users.cs.helsinki.fi:htdocs/$PROJECT_FOLDER
+rsync -z -r $DIR/app $DIR/assets $DIR/config $DIR/lib $DIR/sql $DIR/vendor $DIR/index.php $DIR/composer.json samuvait@users.cs.helsinki.fi:htdocs/tsohasov
 
 echo "Valmis!"
 
 echo "Suoritetaan komento php composer.phar dump-autoload..."
 
 # Suoritetaan php composer.phar dump-autoload
-ssh $USERNAME@users.cs.helsinki.fi "
-cd htdocs/$PROJECT_FOLDER
+ssh samuvait@users.cs.helsinki.fi "
+cd htdocs/tsohasov
 php composer.phar dump-autoload
 exit"
 

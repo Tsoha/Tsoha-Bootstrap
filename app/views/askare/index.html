@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if message is not null %}
+<div class="alert alert-success">
+    {{message}}
+</div>
+{% endif %}
+
+
+  <div class ="col-md-4" style="margin-top: 4px">
+  <h1>Käyttäjän {{user_logged_in.name}} muistilista</h1>
+  </div>
+  
+  <div class ="col-md-8" style="margin-top: 30px">
+    <p>
+        <a href="{{base_path}}/askare/new" class="btn btn-primary">Lisää askare</a>
+    </p>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Askare</th>
+        <th>Luokka</th>
+        <th>Lisäyspäivä</th>
+        <th>Deadline</th>
+        <th>Tärkeysaste</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <!-- Listataan askareet tähän -->
+        {% for askare in askareet %}
+        <tr>
+            <td><a href="{{base_path}}/askare/{{askare.id}}">{{askare.name}}</td>
+            <td>{% for luokka in askare.luokka %}
+                {{luokka}} </br>
+                {% endfor %}</td>
+            <td>{{askare.added}}</td>
+            <td>{{askare.deadline}}</td>
+            <td>{{askare.importance}}</td>
+            <td><a class="btn btn-default btn-sm" href="{{base_path}}/askare/{{askare.id}}/edit">Muokkaa</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class ="col-md-4" style="margin-top: 4px">
+  <h1>Käyttäjän Pekka muistilista</h1>
+  </div>
+  
+  <div class ="col-md-8" style="margin-top: 30px">
+    <p>
+        <a href="#" class="btn btn-primary">Lisää askare</a>
+    </p>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Askare</th>
+        <th>Luokka</th>
+        <th>Tehty</th>
+        <th>Lisäyspäivä</th>
+        <th>Deadline</th>
+        <th>Tärkeysaste</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+              <!-- Listataan askareet tähän -->
+<!--      <tr>
+        <td>Tee tiskit</td>
+        <td>Kotityö</td>
+        <td>Ei</td>
+        <td> 23.3.2017</td>
+        <td> 30.3.2017</td>
+        <td>1</td>
+        <th><a class="btn btn-default btn-sm" href="#">Muokkaa</a></th>
+      </tr>-->
+        {% for askare in askareet %}
+        <tr>
+            <td><a href="{{base_path}}/suunnitelmat/{{askare.id}}">{{askare.name}}</td>
+            <td>{{askare.luokka}}</td>
+            <td>{{askare.done}}</td>
+            <td>{{askare.added}}</td>
+            <td>{{askare.deadline}}</td>
+            <td>{{askare.importance}}</td>
+            <td><a class="btn btn-default btn-sm" href="{{base_path}}/askare/{{askare.id}}/edit">Muokkaa</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+  </div>
+{% endblock %}

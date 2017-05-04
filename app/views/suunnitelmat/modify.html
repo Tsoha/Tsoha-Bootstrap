@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Muokkaa askaretta Tee tiskit</h1>
+
+  <form>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox">
+        Tehty
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Askare</label>
+      <input class="form-control" value="Tee tiskit" type="text">
+    </div>
+    <div class="form-group">
+      <label>Luokka</label>
+      <input class="form-control" value="Kotityö" type="text">
+    </div>
+    <div class="form-group">
+      <label>Deadline</label>
+      <input class="form-control" value="30.3.2017" type="text">
+    </div>
+    <div class="form-group">
+      <label>Tärkeysaste</label>
+      <textarea class="form-control"> Yhdessä aiheutettujen tiskien tiskaaminen käsin. Luo harmoniaa.
+      </textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Tallenna</button>
+    </div>
+  </form>
+{% endblock %}

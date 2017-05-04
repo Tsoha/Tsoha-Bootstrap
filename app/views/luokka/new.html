@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Lisää luokka</h1>
+
+   {% if errors %}
+    <div class="alert alert-danger">
+      <ul>
+        {% for error in errors %}
+          <li>{{error}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+  <form method="post" action="{{base_path}}/luokkastore">
+      
+    <div class="form-group">
+      <label>Luokan nimi</label>
+      <input name="luokka_name" class="form-control" value="{{attributes.luokka_name}}" type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Kuvaus</label>
+      <textarea name="description" class="form-control">{{attributes.description}}</textarea>
+    </div>
+      
+    <div bv class="form-group">
+      <button type="submit" class="btn btn-primary">Lisää</button>
+    </div>
+      
+  </form>
+{% endblock %}
