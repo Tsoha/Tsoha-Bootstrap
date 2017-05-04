@@ -1,15 +1,16 @@
 {
-	"autoload": {
-		"classmap": [
-			"config/database.php",
-			"lib",
-			"app/controllers"
-		]
-	},
-	"require": {
-		"slim/slim": "2.*",
-		"twig/twig": "~1.5",
-		"raveren/kint": "v0.9",
-		"zeuxisoo/slim-whoops": "0.3.0"
-	}
+    "autoload": {
+        "classmap": [
+            "app/models",
+            "config/database.php",
+            "lib",
+            "app/controllers"
+        ]
+    },
+    "require": {
+        "slim/slim": "2.*",
+        "twig/twig": "~1.5",
+        "raveren/kint": "v0.9",
+        "zeuxisoo/slim-whoops": "0.3.0"
+    }
 }

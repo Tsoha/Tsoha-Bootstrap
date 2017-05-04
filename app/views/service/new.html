@@ -1,0 +1,43 @@
+{% extends "frame.html" %}
+{% block content %}
+<div>  
+    
+    <div><a href="{{base_path}}/palvelut" class="btn btn-default btn-xs nappula"><< Takaisin</a></div>
+    
+    <form method ="post" action="{{base_path}}/palvelut/store">
+
+        <div class="form-group">
+            <label>Palvelun nimi</label>
+            <br>Anna palvelulle selkeä nimi
+            <input type="text" name="name" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Hinta</label>
+           
+            <input type="text" name="price" class="form-control" value="">
+        </div>
+
+        <div class="form-group">
+            <label>Kuvaus palvelusta</label>
+            <br>Lisää lyhyt kuvaus palvelun sisällöstä
+            <textarea name="description" class="form-control">
+            </textarea>
+        </div>
+
+        <div class="checkbox">
+            <label>
+
+                <input type="checkbox">
+                Työntekijä
+
+            </label>
+            <strong>Ei vielä käytössä :( </strong>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-info">Tallenna</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

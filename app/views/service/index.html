@@ -1,0 +1,31 @@
+{% extends "frame.html" %}
+{% block content %}
+
+<p>Palvelulista</p>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Palvelu</th>
+            <th>Hinta</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for service in services %}
+        <tr>
+            <td><a href="{{base_path}}/palvelut/{{service.id}}">{{service.name}}</a></td>
+            <td>{{service.price}}</td>
+            <td><a href="{{base_path}}/palvelut/{{service.id}}/edit" class="btn btn-default btn-xs">Muokkaa</a>
+                <a href="{{base_path}}/palvelut/{{service.id}}/delete" class="btn btn-default btn-xs">Poista</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>
+    <a href="{{base_path}}/palvelut/new" class="btn btn-default">Lisää Palvelu</a>
+</p>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "frame.html" %}
+{% block content %}
+<div>
+    <div class="message">{{message}}</div>
+
+    <div><a href="{{base_path}}/palvelut" class="btn btn-default btn-xs nappula"><< Takaisin</a></div>
+
+    <div>
+        <p><strong>Palvelu:</strong> {{service.name}}</p>
+        <p><strong>Palvelun hinta:</strong> {{service.price}} euroa</p>
+        <p><strong>Palvelun kuvaus:</strong> {{service.description}}</p>
+
+    </div>
+
+    <div>
+        <a href="{{base_path}}/palvelut/{{service.id}}/edit" class="btn btn-info btn-xs nappula">Muokkaa</a>
+        <a href="{{base_path}}/palvelut/{{service.id}}/delete" class="btn btn-warning btn-xs nappula">Poista</a>
+    </div>
+</div>
+
+{% endblock %}

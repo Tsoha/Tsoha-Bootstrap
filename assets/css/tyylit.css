@@ -1,0 +1,50 @@
+
+
+/*#keskitetty {
+    height: 1000px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #D9DEDC;
+}*/
+
+
+
+.otsake {
+    background-image: url(../images/cover_bull.jpg);
+    background-color: #9E7E8D;
+    background-size:cover;
+    height:200px;
+}
+
+.linkit {
+    background-color: #EEE5B9;
+}
+
+.sivut {
+    background-color: #FAF9E4;
+}
+
+#keski, #sivupalkki{
+  
+    padding: 20px;
+    color: #333030;
+
+}
+#sivupalkki {
+
+}
+
+#taulunleveys {
+    width: 80%;
+}
+
+.nappula {
+    margin-bottom: 10px;
+    margin-top: 10px;    
+}
+
+.message {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
