@@ -19,8 +19,7 @@
       <link href="{{base_path}}/assets/css/site.css" rel="stylesheet">
     {% endblock %}
   </head>
-
-  <body>
+<body>
 
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
@@ -42,13 +41,24 @@
             <li><a href="{{base_path}}">Etusivu</a></li>
           </ul>
         </div>
+          <div class="collapse navbar-collapse" id="navigation">
+      <ul class="nav navbar-nav">
+        <!-- Navigaation linkit -->
+        <li><a href="memorylist.html">Muistilista</a></li>
+      </ul>
+        
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html">Kirjaudu sisään</a></li>
+      </ul>
+    </div>
       </div>
     </nav>
-
     <div id="main-container">
       <!-- Dynaaminen sisältö tulee tähän -->
       {% block content %}{% endblock %}
     </div>
+      
 
     {% block body %}
       <!-- jQuery -->
