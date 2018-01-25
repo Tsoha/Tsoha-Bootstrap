@@ -1,0 +1,15 @@
+Johdanto
+
+Tietokantasovellukseni aiheena on hintavertailu. Tietokantaan kirjataan tehtyjä ostoksia (tai tekemättömiä) yksittäisinä esineinä. 
+Tietokantaan tulee kauppoja ja tuotteita ja mahdollisesti myös päiviä, joloin voi vertailla kauppojen välisiä hintoja sekä hintojen 
+muutoksia kaupan sisällä päivän mukaan. Sovelus toteutetaan materiaalin mukaisesti koulun koneella PHP-kielellä ja PostgreSQL-tie-
+tokannalla.
+
+
+Käyttötapaukset
+
+Kuluttaja haluaa ostaa perunan. Sovelluksen avulla kuluttaja voi katsoa, missä kaupoissa myydään (tai siis ollaan ainakin myyty)
+perunoita ja mihin hintaan. Sovelluksella voi myös vertailla eri kauppojen hintatasoja. Sovelluksen avulla näkee yksittäisiä 
+havaintoja siitä mihin hintaan, missä ja milloin tuotetta myytiin. Sovellus ei tule kertomaan kuinka paljon tuotetta on kyseisessä 
+kaupassa minäkin hetkenä. Sovellus tulee toimimaan kuluttajien tekemillä päivityksillä ja siten ei aina (ikinä?) anna täysin ajan
+tasalla olevia hintatietoja.
