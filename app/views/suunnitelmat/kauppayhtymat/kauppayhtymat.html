@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Kauppayhtymät</h1>
+<p>
+  <a href="{{base_path}}/kauppayhtymat/uusi" class="btn btn-success">Lisää uusi kauppayhtymä tietokantaan</a>
+</p>
+<body> Tietokannasta löytyvät kauppayhtymät:</body>
+<table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Nimi</th>
+        <th>Bonus</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for kauppayhtyma in kauppayhtymat %}
+        <tr>
+          <td>{{kauppayhtyma.nimi}}</td>
+          <td>{{kauppayhtyma.bonus}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>  
+{% endblock %}

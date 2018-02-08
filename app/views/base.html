@@ -7,7 +7,7 @@
 
     <title>
       {% block title %}
-        Tietokantasovellus
+        Hintavertailu
       {% endblock %}
     </title>
 
@@ -33,13 +33,17 @@
             <span class="icon-bar"></span>
           </button>
           <!-- Sovelluksen nimi -->
-          <a class="navbar-brand" href="{{base_path}}">Tsoha Bootstrap</a>
+          <a class="navbar-brand" href="{{base_path}}">Hintavertailu</a>
         </div>
 
         <div class="collapse navbar-collapse" id="navigation">
           <ul class="nav navbar-nav">
             <!-- Navigaation linkit -->
-            <li><a href="{{base_path}}">Etusivu</a></li>
+            <li><a href="{{base_path}}/kauppayhtymat">Kauppayhtymät</a></li>
+            <li><a href="{{base_path}}/kaupat">Kaupat</a></li>
+            <li><a href="{{base_path}}/tuotehaku">Tuotehaku</a></li>
+            <li><a href="{{base_path}}/tuotteet">Tuotteet</a></li>
+            <li><a href="{{base_path}}/uusi_ostotapahtuma">Lisää uusi ostotapahtuma</a></li>
           </ul>
         </div>
       </div>

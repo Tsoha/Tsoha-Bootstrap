@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Kaupat</h1>
+<p>
+  <a href="{{base_path}}/kaupat/uusi" class="btn btn-success">Lisää uusi kauppa tietokantaan.</a>
+</p>
+<table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Nimi</th>
+        <th>Osoite</th>
+        <th>Kauppayhtymä</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for kauppa in kaupat %}
+        <tr>
+          <td><a href="{{base_path}}/kaupat/{{kauppa.id}}" class="transparent button">{{kauppa.nimi}}</a></td>
+          <td>{{kauppa.osoite}}</td>
+          <td>{{kauppa.kauppayhtyma_id}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>  
+{% endblock %}

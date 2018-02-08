@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+	{% for kauppayhtyma in kauppayhtyma %}
+		<h1>{{kauppayhtyma.nimi}}</h1>
+		<body>
+			{{kauppayhtyma.bonus}}
+		</body>	
+	{% endfor %}		
+{% endblock %}

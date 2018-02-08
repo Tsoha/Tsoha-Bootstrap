@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+	{% for kauppa in kauppa %}
+		<h1>{{kauppa.nimi}}</h1>
+		<body>
+			{{kauppa.osoite}}
+			{{kauppa.kauppayhtyma_id}}
+		</body>	
+	{% endfor %}		
+{% endblock %}

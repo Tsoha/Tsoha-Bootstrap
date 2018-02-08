@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Lisää uusi ostotapahtuma tietokantaan:</h1>
+
+  <form method="post" action="{{base_path}}/uusi_ostotapahtuma">
+    <div class="form-group">
+      <label>Tuote</label>
+      <input name="tuote_id" class="form-control" type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Kauppa</label>
+      <input name="kauppa_id" class="form-control" type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Hinta</label>
+      <input name="hinta" class="form-control" type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Ostohetki</label>
+      <input name="ostohetki" class="form-control" type="text">
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Lisää</button>
+    </div>
+  </form>
+{% endblock %}
