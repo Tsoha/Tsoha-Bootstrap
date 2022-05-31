@@ -1,5 +1,7 @@
 # Tietokantasovelluksen esittelysivu
 
+Ei käytössä useaan vuoteen. Arkistoitu.
+
 Yleisiä linkkejä:
 
 * [Linkki sovellukseeni](https://www.cs.helsinki.fi)
